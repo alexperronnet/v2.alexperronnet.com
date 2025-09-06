@@ -1,21 +1,29 @@
 {
-  "name": "v2.alexperronnet.com",
-  "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.4.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "typegen": "next typegen",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "next": "15.5.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@antfu/eslint-config": "^5.2.2",
+    "@eslint-react/eslint-plugin": "^1.53.0",
+    "@next/eslint-plugin-next": "^15.5.2",
     "@types/node": "^20",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "typescript": "^5"
   }
 }
