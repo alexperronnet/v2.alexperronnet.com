@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { cn } from '@/lib/class-names'
+import { fontVariables } from '@/lib/fonts'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -7,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="scroll-smooth">
+      <body className={cn(fontVariables, 'overscroll-none bg-background font-body text-foreground antialiased')}>
         {children}
       </body>
     </html>
