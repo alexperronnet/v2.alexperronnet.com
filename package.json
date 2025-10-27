@@ -1,6 +1,4 @@
 {
-  "name": "v2.alexperronnet.com",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "prepare": "husky",
@@ -14,6 +12,8 @@
     "next": "16.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
