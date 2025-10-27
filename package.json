@@ -4,7 +4,9 @@
     "prepare": "husky",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "biome:check": "ultracite check",
+    "biome:fix": "ultracite fix"
   },
   "dependencies": {
     "react": "19.2.0",
