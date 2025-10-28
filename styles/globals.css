@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-*: initial;
+  --color-rosewater: var(--rosewater);
+  --color-flamingo: var(--flamingo);
+  --color-pink: var(--pink);
+  --color-mauve: var(--mauve);
+  --color-red: var(--red);
+  --color-maroon: var(--maroon);
+  --color-peach: var(--peach);
+  --color-yellow: var(--yellow);
+  --color-green: var(--green);
+  --color-teal: var(--teal);
+  --color-sky: var(--sky);
+  --color-sapphire: var(--sapphire);
+  --color-blue: var(--blue);
+  --color-lavender: var(--lavender);
+  --color-text: var(--text);
+  --color-subtext-1: var(--subtext-1);
+  --color-subtext-0: var(--subtext-0);
+  --color-overlay-2: var(--overlay-2);
+  --color-overlay-1: var(--overlay-1);
+  --color-overlay-0: var(--overlay-0);
+  --color-surface-2: var(--surface-2);
+  --color-surface-1: var(--surface-1);
+  --color-surface-0: var(--surface-0);
+  --color-base: var(--base);
+  --color-mantle: var(--mantle);
+  --color-crust: var(--crust);
+
+  --font-*: initial;
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --rosewater: oklch(0.78 0.16 25);
+  --flamingo: oklch(0.75 0.14 25);
+  --pink: oklch(0.79 0.21 328);
+  --mauve: oklch(0.63 0.26 287);
+  --red: oklch(0.58 0.24 15);
+  --maroon: oklch(0.65 0.21 17);
+  --peach: oklch(0.7 0.23 55);
+  --yellow: oklch(0.73 0.19 70);
+  --green: oklch(0.63 0.2 142);
+  --teal: oklch(0.61 0.16 195);
+  --sky: oklch(0.7 0.21 222);
+  --sapphire: oklch(0.66 0.17 210);
+  --blue: oklch(0.6 0.24 264);
+  --lavender: oklch(0.75 0.19 270);
+  --text: oklch(0.42 0.05 260);
+  --subtext-1: oklch(0.47 0.04 260);
+  --subtext-0: oklch(0.52 0.04 260);
+  --overlay-2: oklch(0.57 0.04 260);
+  --overlay-1: oklch(0.62 0.04 260);
+  --overlay-0: oklch(0.67 0.04 260);
+  --surface-2: oklch(0.72 0.04 260);
+  --surface-1: oklch(0.77 0.03 260);
+  --surface-0: oklch(0.83 0.03 260);
+  --base: oklch(0.96 0.02 250);
+  --mantle: oklch(0.93 0.02 250);
+  --crust: oklch(0.9 0.02 250);
+}
+
+.dark {
+  --rosewater: oklch(0.91 0.04 25);
+  --flamingo: oklch(0.88 0.03 25);
+  --pink: oklch(0.86 0.06 328);
+  --mauve: oklch(0.82 0.08 287);
+  --red: oklch(0.75 0.09 15);
+  --maroon: oklch(0.78 0.07 17);
+  --peach: oklch(0.78 0.1 55);
+  --yellow: oklch(0.83 0.1 70);
+  --green: oklch(0.8 0.09 142);
+  --teal: oklch(0.78 0.08 195);
+  --sky: oklch(0.78 0.1 222);
+  --sapphire: oklch(0.75 0.09 210);
+  --blue: oklch(0.76 0.1 264);
+  --lavender: oklch(0.85 0.08 270);
+  --text: oklch(0.88 0.04 260);
+  --subtext-1: oklch(0.8 0.03 260);
+  --subtext-0: oklch(0.72 0.03 260);
+  --overlay-2: oklch(0.64 0.03 260);
+  --overlay-1: oklch(0.55 0.03 260);
+  --overlay-0: oklch(0.47 0.03 260);
+  --surface-2: oklch(0.39 0.03 260);
+  --surface-1: oklch(0.31 0.03 260);
+  --surface-0: oklch(0.23 0.03 260);
+  --base: oklch(0.15 0.03 260);
+  --mantle: oklch(0.12 0.03 260);
+  --crust: oklch(0.09 0.03 260);
+}
+
+@layer base {
+  body {
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
